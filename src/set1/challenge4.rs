@@ -1,3 +1,10 @@
+// Copyright 2016 params Developers
+//
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
+
 //! This challenge module requires the reading of a sizeable file with 60 hex-character
 //! lines. One of the lines is encrypted using single-character XOR. It's our job to
 //! find that line. I will use the techniques learned in challenge-3 for an ultimate 

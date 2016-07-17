@@ -1,3 +1,10 @@
+// Copyright 2016 params Developers
+//
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
+
 //! This challenge requires use to break a repeating-key XOR ("Vigenere"). This will be the
 //! qualifying challenge for the rest of the challenges. It will be difficult. The claim is
 //! that people know how to break this but less people can actually break it.

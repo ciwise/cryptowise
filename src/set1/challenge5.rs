@@ -1,3 +1,10 @@
+// Copyright 2016 params Developers
+//
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
+
 //! This challenge requests that we encrypt a specified text string in plain-text using a repeating key
 //! XOR operation using "ICE" as the three bytes that will be repeated beneath the plain-text from left
 //! to right. ICE equates to 49,43, and 45 in base16(hex) respectively. The plain-text string must be first
