@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `set1` mod in crate `cryptowise`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, set1">
+
+    <title>cryptowise::set1 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>cryptowise</a></p><script>window.sidebarCurrent = {name: 'set1', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>cryptowise</a>::<wbr><a class='mod' href=''>set1</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-5' class='srclink' href='../../src/cryptowise/src/set1/mod.rs.html#8-22' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>The set1 module manages the declaration of the challenge modules for this set.
+This module is the qualifying set. The exercises here are to ramp developers up
+gradually into being able to code cryptography challenges. It&#39;s said that these 
+are easy. For some I suppose. My implementation of these challenges is done using
+Rust and I&#39;m a Java professional first. Rust is a good choice for these challenges.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='challenge1/index.html'
+                                  title='cryptowise::set1::challenge1'>challenge1</a></td>
+                           <td class='docblock short'>
+                                <p>This challenge is to convert a hexadecimal string respresention and
+prove a conversion to base 64 equates to a translation that&#39;s given.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='challenge2/index.html'
+                                  title='cryptowise::set1::challenge2'>challenge2</a></td>
+                           <td class='docblock short'>
+                                <p>This challenge is to perform
+an exclusive bitwise OR operation on two hexadecimal strings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='challenge3/index.html'
+                                  title='cryptowise::set1::challenge3'>challenge3</a></td>
+                           <td class='docblock short'>
+                                <p>This challenge module requires you to devise a way to score a response that&#39;s obtained
+by doing an XOR operation in reverse. A plain-text string is XOR&#39;ed with a single
+character key. The cryptopal website is a little unclear about how this character
+is used. The hex string given in the challenge is the result of the secret message
+and the single key (2 char byte represenation) repeated 34 times beneath or across
+the hex string length. The answer to this challenge is given by running the tests
+like so:</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='challenge4/index.html'
+                                  title='cryptowise::set1::challenge4'>challenge4</a></td>
+                           <td class='docblock short'>
+                                <p>This challenge module requires the reading of a sizeable file with 60 hex-character
+lines. One of the lines is encrypted using single-character XOR. It&#39;s our job to
+find that line. I will use the techniques learned in challenge-3 for an ultimate 
+solution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='challenge5/index.html'
+                                  title='cryptowise::set1::challenge5'>challenge5</a></td>
+                           <td class='docblock short'>
+                                <p>This challenge requests that we encrypt a specified text string in plain-text using a repeating key
+XOR operation using &quot;ICE&quot; as the three bytes that will be repeated beneath the plain-text from left
+to right. ICE equates to 49,43, and 45 in base16(hex) respectively. The plain-text string must be first
+converted to a hex string and then the 494345494345... sequence XOR&#39;ed with it to produce the encrypted
+hexadecimal string. The encrypted hex string is given in the cryptopals challenge.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='challenge6/index.html'
+                                  title='cryptowise::set1::challenge6'>challenge6</a></td>
+                           <td class='docblock short'>
+                                <p>This challenge requires use to break a repeating-key XOR (&quot;Vigenere&quot;). This will be the
+qualifying challenge for the rest of the challenges. It will be difficult. The claim is
+that people know how to break this but less people can actually break it.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "cryptowise";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

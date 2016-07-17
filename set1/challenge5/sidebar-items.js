@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["static_to_hex","This function takes a static string argument and converts it to hex returning String."]]});

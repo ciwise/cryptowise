@@ -1,7 +1,0 @@
-[package]
-name = "cryptowise"
-version = "0.1.0"
-authors = ["David L. Whitehurst <david@ciwise.com>"]
-
-[dependencies]
-rustc-serialize = "0.3"
