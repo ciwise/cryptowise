@@ -13,7 +13,7 @@
 //! The encryption is repeating XOR.
 
 /// This function accepts two static hex strings of equal length and 
-/// returns a hamming_distance or weight of usize (integer)
+/// returns a hamming_distance of usize (integer)
 use set1::challenge2::xor;
 
 pub fn hamming_distance(s1: &str, s2: &str) -> usize {
