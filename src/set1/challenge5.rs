@@ -16,7 +16,6 @@
 //!
 
 use rustc_serialize::hex::ToHex;
-use set1::challenge2::xor;
 
 /// This function takes a static string argument and converts it
 /// to hex returning String.

@@ -17,10 +17,8 @@ use std::io;
 use std::io::BufReader;
 use std::io::BufRead;
 use std::fs::File;
-use std::path::Path;
 use std::str;
 use std::iter;
-use std::string;
 
 /// This function reads the data file line by line and then sends
 /// the line to the wc_single_char_xor_encrypted_line function and 
@@ -28,7 +26,7 @@ use std::string;
 /// the secret message is extracted and printed to the screen.
 pub fn process_file() -> Result<(), io::Error> {
   let f = try!(File::open("src/resources/4.txt"));
-  let mut file = BufReader::new(&f);
+  let file = BufReader::new(&f);
   let mut lineno: usize = 0;
   for line in file.lines() {
    lineno = lineno + 1;
@@ -60,7 +58,7 @@ pub fn get_message(hex_line_60: &str) {
 		let utf8_error = "UTF-8 Error".to_string();
          let s = match String::from_utf8(result) {
            Ok(v) => v,
-	       Err(e) => utf8_error,
+	       Err(_e) => utf8_error,
          };
 	 let wc = word_count(&s);
 	 if wc > best {
@@ -80,8 +78,6 @@ pub fn get_message(hex_line_60: &str) {
 /// is human-readable.
 pub fn wc_single_char_xor_encrypted_line(hex_line_60: &str) -> usize {
     let mut best: usize = 0;
-    let mut answer: usize = 0;
-    let mut message = "".to_string();
 
     for x in 0..255 {
         let hexkey = format!("{:02x}",x);
@@ -90,13 +86,11 @@ pub fn wc_single_char_xor_encrypted_line(hex_line_60: &str) -> usize {
 		let utf8_error = "UTF-8 Error".to_string();
          let s = match String::from_utf8(result) {
            Ok(v) => v,
-	       Err(e) => utf8_error,
+	       Err(_e) => utf8_error,
          };
 	 let wc = word_count(&s);
 	 if wc > best {
 	   best = wc;
-	   answer = x;
-	   message = s;
 	 }
 
     }
@@ -112,7 +106,9 @@ mod tests {
 
   #[test]
   fn find_encrypted_line() {
-    process_file();
+    let result = process_file();
+    // -- --no capture maybe?
+    println!("{:?}", result);
   }
 } // end mod tests
 

@@ -15,20 +15,17 @@
 //!
 //! $ cargo test -- --nocapture
 //!
-//! # Test Notes
-//! The syntax here is not correct for the nocapture option, however it does
-//! work to allow the print statements to come with the test output.
-//!
 //! # Examples
 //!
-//! ``` 
+//! ```
+//! extern crate cryptowise; 
+//! use cryptowise::set1::challenge3::word_count;
+//! fn main() {
 //! let tmp = "Mary had a little lamb.";
 //! assert_eq!(5, word_count(tmp));
+//! }
 //! ```
 //!
-
-  
-
 
 use set1::challenge2::xor;
 use std::str;
@@ -39,6 +36,14 @@ use std::iter;
 /// 
 /// # Examples
 ///
+/// ```
+/// extern crate cryptowise;
+/// use cryptowise::set1::challenge3::word_count;
+/// fn main() {
+/// let result = word_count("My name is David");
+/// assert_eq!(4, result);
+/// }
+/// ```
 ///
 pub fn word_count(long_str: &str) -> usize {
    let v: Vec<&str> = long_str.split(' ').collect();
@@ -61,6 +66,14 @@ pub fn word_count(long_str: &str) -> usize {
 ///
 /// # Examples
 ///
+/// ```
+/// extern crate cryptowise;
+/// use cryptowise::set1::challenge3::{single_char_key, word_count};
+/// fn main() {
+///   let result = single_char_key();
+///   assert_eq!(7, result);
+/// }
+/// ```
 /// 
 pub fn single_char_key() -> usize {
     let mut best: usize = 0;
@@ -99,8 +112,8 @@ mod tests {
 
   #[test]
   fn test_word_count() {
-    assert_eq!(5, word_count("Mary had a little lamb."));
-
+  	let static_str = "Mary had a little lamb";
+    assert_eq!(5, word_count(static_str));
   }
 
   #[test]
