@@ -1,4 +1,5 @@
 # cryptowise
+[![Build Status](https://travis-ci.org/ciwise/cryptowise.svg?branch=master)](https://travis-ci.org/ciwise/cryptowise)
 
 This project is a Rust implementation of the Matasano Cryptography Challenges (cryptopals.com).
 
